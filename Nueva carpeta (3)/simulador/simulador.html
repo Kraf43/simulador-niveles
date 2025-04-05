@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Niveles</title>
+  <link rel="stylesheet" href="simulador.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Simulador de Niveles</h1>
+
+    <label for="precioCompra">Precio de Compra</label>
+    <input type="number" id="precioCompra" class="rojo" step="any" placeholder="Ej: 1115.54">
+
+    <label for="precioVenta">Precio de Venta</label>
+    <input type="number" id="precioVenta" class="verde" step="any" placeholder="Ej: 1123.79">
+
+    <div class="resultados" id="resultados">
+      <p><strong>Brecha en pesos:</strong> <span id="brecha">-</span></p>
+      <p><strong>Ganancia sin comisión:</strong> <span id="sinComision">-</span>%</p>
+      <p><strong>Con comisión Anunciante (0.4%):</strong> <span id="comAnun">-</span>%</p>
+      <p><strong>Comerciante con tilde (0.32%):</strong> <span id="comTil">-</span>%</p>
+      <p><strong>VIP 2 (0.28%):</strong> <span id="vip2">-</span>%</p>
+      <p><strong>VIP 3 (0.2%):</strong> <span id="vip3">-</span>%</p>
+    </div>
+
+    <div id="advertencia" style="color: red; display: none; margin-top: 10px;"></div>
+
+    <hr style="margin: 30px 0; border: none; border-top: 2px solid #ccc;">
+
+    <h2>Ganancia estimada</h2>
+
+    <label for="capitalUsd">¿Con cuántos dólares vas a operar?</label>
+    <input type="number" id="capitalUsd" step="any" placeholder="Ej: 100">
+
+    <div class="resultados" id="ganancias">
+      <p><strong>Ganancia sin comisión:</strong> <span id="gananciaSin">-</span> pesos</p>
+      <p><strong>Anunciante (0.4%):</strong> <span id="gananciaAnun">-</span> pesos</p>
+      <p><strong>Con tilde (0.32%):</strong> <span id="gananciaTil">-</span> pesos</p>
+      <p><strong>VIP 2 (0.28%):</strong> <span id="gananciaVip2">-</span> pesos</p>
+      <p><strong>VIP 3 (0.2%):</strong> <span id="gananciaVip3">-</span> pesos</p>
+    </div>
+
+    <!-- Botón de acceso al Registro -->
+    <a href="/Registro/Registro.html" class="btn-registro">Ir al Registro de Operaciones</a>
+  </div>
+
+  <script src="simulador.js"></script>
+</body>
+</html>

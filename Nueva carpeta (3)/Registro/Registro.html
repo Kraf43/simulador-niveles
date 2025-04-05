@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Operaciones</title>
+  <link rel="stylesheet" href="Registro.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Registro de Operaciones</h1>
+
+    <form id="registroForm">
+      <label for="compra">Precio de Compra:</label>
+      <input type="number" step="any" id="compra" required>
+
+      <label for="venta">Precio de Venta:</label>
+      <input type="number" step="any" id="venta" required>
+
+      <label for="capital">Capital (USD):</label>
+      <input type="number" step="any" id="capital" required>
+
+      <label for="comision">Comisión:</label>
+      <select id="comision">
+        <option value="0">Sin comisión</option>
+        <option value="0.004">Anunciante (0.4%)</option>
+        <option value="0.0032">Con tilde (0.32%)</option>
+        <option value="0.0028">VIP 2 (0.28%)</option>
+        <option value="0.002">VIP 3 (0.2%)</option>
+      </select>
+
+      <button type="submit">Registrar operación</button>
+    </form>
+
+    <hr>
+
+    <h2>Historial</h2>
+    <table id="tablaHistorial">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Compra</th>
+          <th>Venta</th>
+          <th>Capital</th>
+          <th>Comisión</th>
+          <th>Ganancia (pesos)</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Registros se insertan aquí -->
+      </tbody>
+    </table>
+
+    <div class="export-buttons">
+      <button onclick="exportarExcel()">Exportar a Excel</button>
+      <button onclick="exportarImagen()">Exportar como Imagen</button>
+      <button onclick="window.print()">Imprimir</button>
+      <button onclick="window.location.href='../simulador/simulador.html'">Volver al Simulador</button>
+    </div>
+  </div>
+
+  <!-- Librería html2canvas para exportar imagen -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <!-- Librería SheetJS para exportar a Excel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <script src="Registro.js"></script>
+</body>
+</html>
